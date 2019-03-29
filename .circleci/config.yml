@@ -9,10 +9,11 @@ jobs:
     steps:
       - checkout
       - aws-cli/install
+      - run: which aws
+      - run: aws --version
 
 workflows:
   version: 2
   aws-cli:
     jobs:
-      - aws-cli:
-          context: aws
+      - aws-cli
