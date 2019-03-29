@@ -5,7 +5,9 @@ orbs:
 
 jobs:
   aws-cli:
-    executor: aws-cli/default
+    executor:
+      name: aws-cli/default
+      python-version: "3.7"
     steps:
       - checkout
       - aws-cli/install
